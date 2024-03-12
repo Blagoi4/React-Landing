@@ -1,0 +1,74 @@
+.services-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.ourServices-card {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+.ourServices-card__img {
+position: relative;
+z-index: 1;
+}
+
+.ourServices-card__info {
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: start;
+gap: 30px;
+border: 1px solid #BBBBBB;
+color: #2F3B42;
+padding: 20px 200px 20px 100px;
+z-index: 2;
+position: relative;
+margin-left: -50px;
+background-color: white;
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border-right-width: 0;
+}
+
+.ourServices-card__info__title {
+font-size: 27px;
+}
+
+.ourServices-card__info__description {
+    font-size: 20px;
+    color: #2F3B42;
+
+}
+.ourServices-card__info__price {
+font-size: 27px;
+}
+.ourServices-card__info__btn {
+
+}
+
+@media (max-width: 1024px) { 
+    .services-cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    gap: 30px;
+    padding: 10px 10px;
+
+    }
+    .ourServices-card__img {
+        display:none ;
+    }
+    .ourServices-card__info {
+        padding: 10px 20px;
+        margin: 0;
+        border: 1px solid #2F3B42 ;
+        border-radius: 15px;
+        
+        
+       
+    }
+} 

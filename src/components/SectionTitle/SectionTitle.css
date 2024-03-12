@@ -1,0 +1,15 @@
+.line {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 16px;
+}
+.subTitle {
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+@media (max-width: 1024px) { 
+    .subTitle {
+        padding: 0px;
+    }
+}

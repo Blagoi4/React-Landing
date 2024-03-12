@@ -1,0 +1,32 @@
+.whyChooseUs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 30px;
+}
+.whyChooseUs-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 80px;
+  gap: 20px;
+  flex: 1;
+  border: 4px solid;
+  border-color: #2d81af;
+  border-radius: 15px;
+}
+.whyChooseUs-card__title {
+  font-size: 17px;
+  color: #4b4b4b;
+}
+.btn-WhyChooseUs {
+ padding: 32px 0px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) { 
+  .whyChooseUs-wrapper {
+    
+  }
+} 

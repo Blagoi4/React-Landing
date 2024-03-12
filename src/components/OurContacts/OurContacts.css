@@ -1,0 +1,19 @@
+.contacts-google {
+    padding-top: 32px;
+    text-align: center;
+}
+.contacts-google__text {
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 35px;
+gap: 20px;
+    
+}
+
+
+@media (max-width: 1024px) { 
+    .google-map {
+        width: 100%;
+    }
+}
