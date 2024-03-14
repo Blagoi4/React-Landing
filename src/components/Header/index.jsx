@@ -3,17 +3,19 @@ import ClimateIcon from "../../images/climateicon.jpeg";
 import Phone from "../../images/phone.svg";
 import Vector from "../../images/Vector.svg";
 import Button from "../Button";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
       <div className="header-contact">
         <div className="container">
           <div className="header-contact-wrapper">
+            <Link to='/'>
             <div className="header-contact__icon">
               <img src={ClimateIcon} alt="" />
               <p>Климатические системы в Украине</p>
             </div>
-
+            </Link>
             <div className="header-contact__number">
               <img src={Phone} alt="" />
               <p>+ 3 (741) 485-68-23</p>
@@ -25,10 +27,12 @@ const Header = () => {
         <div className="container">
           <div className="header-catalog-wrapper">
             <div className="header-catalog__menu">
+            <Link to='/catalog'>
               <p className="p-text">
                 Каталог
                 <img src={Vector} alt="" />
               </p>
+              </Link>
               <p>Услуги</p>
             </div>
             <div className="header-catalog__button">
