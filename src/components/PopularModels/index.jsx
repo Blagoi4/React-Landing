@@ -1,6 +1,6 @@
 import "../PopularModels/PopularModels.css";
 import SectionTitle from "../SectionTitle";
-import Card from "./Card";
+import Card from "../Card";
 
 const PopularModel = ({ data, title, subTitle }) => {
   return (

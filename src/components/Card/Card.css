@@ -1,0 +1,19 @@
+.popular-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 20px 20px 20px;
+    border: 1px solid #bbbb;
+    border-radius: 15px;
+  }
+  
+  .popular-card__title {
+    color: #4b4b4b;
+  }
+  
+  .popular-card__price {
+    color: #4b4b4b;
+  }
+  

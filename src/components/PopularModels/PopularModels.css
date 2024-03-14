@@ -4,24 +4,6 @@
   justify-content: space-between;
 }
 
-.popular-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 30px 10px 30px 30px;
-  border: 1px solid #bbbb;
-  border-radius: 15px;
-}
-
-.popular-card__title {
-  color: #4b4b4b;
-}
-
-.popular-card__price {
-  color: #4b4b4b;
-}
 
 @media (max-width: 1024px) { 
   .popular-models-wrapper {

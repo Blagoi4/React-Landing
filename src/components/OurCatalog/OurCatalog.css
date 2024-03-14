@@ -9,19 +9,9 @@ flex-wrap: wrap;
 flex-direction: row;
 
 gap: 10px;
-/* gap: 10px; */
+
 
 }
-/* .our-catalog-card__left {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-} */
-/* .our-catalog-card__right {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-} */
 .our-catalog-card {
     border: 1px solid #BBBBBB;
     padding: 15px 66px;
@@ -33,4 +23,11 @@ gap: 10px;
 align-items: center;
     flex: 1;
    
+}
+
+@media (max-width: 1024px) { 
+    .our-catalog-card {
+text-wrap: wrap;
+text-align: center;
+    }
 }

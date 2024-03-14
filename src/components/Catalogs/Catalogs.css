@@ -1,0 +1,48 @@
+.catalog-wrapper {
+display: flex;
+flex-direction: row;
+gap: 10px;
+}
+.filter-wrapper {
+display: flex;
+flex: 0.5;
+padding-top: 10px;
+flex-direction: column;
+}
+.catalogList-wrapper {
+display: flex;
+flex-wrap: wrap;
+flex: 2.3;
+gap: 30px;
+}
+.filter-brands{
+    display: flex;
+    flex-direction: column;
+}
+.filter-brands__branding {
+    padding-bottom: 15px;
+}
+.filter-brands__names {
+
+}
+.filter-brands__buttons {
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 1024px) { 
+    .catalog-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .catalogList-wrapper {
+      flex: 1;
+        align-items: center;
+        justify-content: center;
+        
+    }
+} 

@@ -2,9 +2,8 @@ import "./OurCatalog.css";
 import SectionTitle from "../SectionTitle";
 import CatalogPagesIconVector from "../../images/catalogPagesIconVector.svg";
 import Card from "./Card/Card";
-import dataOurCatalog from "./dataOurCatalog";
 
-const OurCatalog = ({ title }) => {
+const OurCatalog = ({ data, title }) => {
   return (
     <section>
       <div className="container">
@@ -16,7 +15,7 @@ const OurCatalog = ({ title }) => {
         </div>
         <SectionTitle title={title} />
         <div className="our-catalog-wrapper">
-          {dataOurCatalog.map((item) => (
+          {data.map((item) => (
             <Card title={item.title}  key={item.key}/>
           ))}
         </div>

@@ -1,5 +1,5 @@
-import "../PopularModels.css";
-import Button from '../../Button/index'
+import "./Card.css";
+import Button from '../Button'
 
 const Card = ({ img, title, price, btnText }) => {
   return (
