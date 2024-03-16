@@ -1,11 +1,20 @@
 import './CatalogList.css'
-const CatalogList = ({data,title,price}) => {
+import  Card from '../../Card'
+
+const CatalogList = ({items}) => {
 return (
-    <>
-    <div>
- 
-          </div>
-    </>
+    <div className="catalogList-wrapper">
+    {items.map((item) => (
+      <Card
+        img={item.img}
+        title={item.title}
+        price={item.price}
+        btnText={item.btnText}
+        brand={item.brand}
+        key={item.id}
+      />
+    ))}
+  </div>
 )
 }
 

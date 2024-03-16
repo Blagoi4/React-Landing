@@ -1,0 +1,14 @@
+.catalogList-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2.3;
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .catalogList-wrapper {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,47 +1,45 @@
 import "./Catalogs.css";
-import Card from "../Card";
+
 import dataCatalogs from "./data";
-import CheckBox from "../CheckBox";
-import dataCheckbox from "../CheckBox/dataCheckBox";
-import Button from "./Filter/Button";
+import { useState } from "react";
+import Filter from "./Filter";
+import CatalogList from "./CatalogList";
 
 const Catalogs = () => {
+  const [cards, setCards] = useState(dataCatalogs);
+  const [filterName, setFilterName] = useState([]);
+  const [isChecked, setIsChecked] = useState(false)
+  const getBrandName = (inputName) => {
+    if (filterName.includes(inputName)) {
+      const currentFilterNames = filterName.filter((el) => el !== inputName);
+      setFilterName(currentFilterNames);
+      setIsChecked(false)
+    } else {
+      setFilterName([...filterName, inputName]);
+      setIsChecked(true)
+    }
+  };
+  const filterCardsByBrandNAme = () => {
+    const filterCards = dataCatalogs.filter((el) =>
+      filterName.includes(el.brand)
+    );
+    setCards(filterCards);
+  };
+  const resetFilterCards = () => {
+    setCards(dataCatalogs)
+    setIsChecked(false)
+  }
   return (
     <section>
       <div className="container">
         <div className="catalog-wrapper">
-          <div className="filter-wrapper">
-            <div className="filter-brands">
-              <div className="filter-brands__branding"> Бренд</div>
-              <div className="filter-brands__names">
-                {dataCheckbox.map((item) => (
-                  <CheckBox
-                    inputName={item.inputName}
-                    inputId={item.inputId}
-                    labelHtmlFor={item.labelHtmlFor}
-                    xLinkHref={item.xLinkHref}
-                    symbolId={item.symbolId}
-                    key={item.inputId}
-                  />
-                ))}
-              </div>
-              <div className="filter-brands__buttons">
-                <Button btnText="Применить" />
-                <Button btnText="Сбросить фильтры" />
-              </div>
-            </div>
-          </div>
-          <div className="catalogList-wrapper">
-            {dataCatalogs.map((item) => (
-              <Card
-                img={item.img}
-                title={item.title}
-                price={item.price}
-                btnText={item.btnText}
-                key={item.id}
-              />
-            ))}
-          </div>
+          <Filter
+            filterCardsByBrandNAme={filterCardsByBrandNAme}
+            getBrandName={getBrandName}
+            resetFilterCards={resetFilterCards}
+            isChecked={isChecked}
+          />
+          <CatalogList items={cards} />
         </div>
       </div>
     </section>

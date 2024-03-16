@@ -5,14 +5,18 @@ const CheckBox = ({
   labelHtmlFor,
   xLinkHref,
   symbolId,
+  onClick,
+  isChecked,
 }) => {
   return (
     <div className="checkbox-wrapper-4">
       <input
+        onClick={onClick}
         className="inp-cbx"
         name={inputName}
         id={inputId}
         type="checkbox"
+        checked={isChecked}
       />
       <label className="cbx" htmlFor={labelHtmlFor}>
         <span>
