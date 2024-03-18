@@ -17,3 +17,16 @@
     flex-direction: column;
     gap: 15px;
 }
+.filter-input {
+  gap: 10px;
+display: flex;
+flex-direction: column;
+padding-bottom: 30px;
+}
+
+.filter-input__from {
+
+}
+.filter-input__to {
+
+}

@@ -4,7 +4,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '25550 uah',
         btnText: 'Подробнее',
         id: 1,
         brand: 'Belluna',
@@ -13,7 +13,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '10550 uah',
         btnText: 'Подробнее',
         id: 2,
         brand: 'Belluna',
@@ -22,7 +22,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '5550 uah',
         btnText: 'Подробнее',
         id: 3,
         brand: 'Daikin',
@@ -31,7 +31,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '30550 uah',
         btnText: 'Подробнее',
         id: 4,
         brand: 'Daikin',
@@ -40,7 +40,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '35550 uah',
         btnText: 'Подробнее',
         id: 5,
         brand: 'Sapien',
@@ -49,7 +49,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '7550 uah',
         btnText: 'Подробнее',
         id: 6,
         brand: 'Sapien',
@@ -58,7 +58,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '22550 uah',
         btnText: 'Подробнее',
         id: 7,
         brand: 'Nunc',
@@ -67,7 +67,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '2550 uah',
         btnText: 'Подробнее',
         id: 8,
         brand: 'Nunc',
@@ -76,7 +76,7 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25 550 uah',
+        price: '9550 uah',
         btnText: 'Подробнее',
         id: 9,
         brand: 'Nunc',

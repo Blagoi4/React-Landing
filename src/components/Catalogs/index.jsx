@@ -1,5 +1,4 @@
 import "./Catalogs.css";
-
 import dataCatalogs from "./data";
 import { useState } from "react";
 import Filter from "./Filter";
@@ -8,27 +7,58 @@ import CatalogList from "./CatalogList";
 const Catalogs = () => {
   const [cards, setCards] = useState(dataCatalogs);
   const [filterName, setFilterName] = useState([]);
-  const [isChecked, setIsChecked] = useState(false)
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+
   const getBrandName = (inputName) => {
     if (filterName.includes(inputName)) {
       const currentFilterNames = filterName.filter((el) => el !== inputName);
       setFilterName(currentFilterNames);
-      setIsChecked(false)
     } else {
       setFilterName([...filterName, inputName]);
-      setIsChecked(true)
     }
   };
+
   const filterCardsByBrandNAme = () => {
-    const filterCards = dataCatalogs.filter((el) =>
-      filterName.includes(el.brand)
-    );
+    const fromNumber = Number(from) ?? 0;
+    const toNumber = Number(to) ?? 0;
+
+    const priceCheck = (el, from, to) => {
+      const elNumber = Number(el.price.split(" ")[0]);
+      if (from && to) {
+        return elNumber >= from && elNumber <= to;
+      } else if (from) {
+        return elNumber >= from;
+      } else if (to) {
+        return elNumber <= to;
+      }
+    };
+
+    const filterCards = dataCatalogs.filter((el) => {
+      if (filterName.length) {
+        if (fromNumber || toNumber) {
+          return (
+            filterName.includes(el.brand) &&
+            priceCheck(el, fromNumber, toNumber)
+          );
+        } else {
+          return filterName.includes(el.brand);
+        }
+      } else if (fromNumber || toNumber) {
+        return priceCheck(el, fromNumber, toNumber);
+      } else {
+        return true
+      }
+    });
+
     setCards(filterCards);
   };
+
   const resetFilterCards = () => {
-    setCards(dataCatalogs)
-    setIsChecked(false)
-  }
+    setCards(dataCatalogs);
+    setFilterName([]);
+  };
+
   return (
     <section>
       <div className="container">
@@ -37,7 +67,11 @@ const Catalogs = () => {
             filterCardsByBrandNAme={filterCardsByBrandNAme}
             getBrandName={getBrandName}
             resetFilterCards={resetFilterCards}
-            isChecked={isChecked}
+            checkedItems={filterName}
+            onChangeFrom={setFrom}
+            onChangeTo={setTo}
+            from={from}
+            to={to}
           />
           <CatalogList items={cards} />
         </div>

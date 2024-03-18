@@ -11,7 +11,7 @@ const CheckBox = ({
   return (
     <div className="checkbox-wrapper-4">
       <input
-        onClick={onClick}
+        onChange={onClick}
         className="inp-cbx"
         name={inputName}
         id={inputId}
