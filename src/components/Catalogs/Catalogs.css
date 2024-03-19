@@ -3,6 +3,19 @@
   flex-direction: row;
   gap: 10px;
 }
+.filter-brands__buttons {
+  display: flex;
+  padding-top: 30px;
+  flex-direction: column;
+  gap: 15px;
+}
+.filter-wrapper {
+  display: flex;
+  flex: 0.5;
+  padding-top: 10px;
+  gap: 15px;
+  flex-direction: column;
+}
 
 @media (max-width: 1024px) {
   .catalog-wrapper {

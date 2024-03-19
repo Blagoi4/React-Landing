@@ -1,4 +1,4 @@
-const dataCheckbox = [
+const dataFilterBrand = [
   {
     inputName: "Belluna",
     inputId: "belluna",
@@ -36,4 +36,4 @@ const dataCheckbox = [
   },
 ];
 
-export default dataCheckbox;
+export default dataFilterBrand;

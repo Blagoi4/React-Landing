@@ -1,0 +1,18 @@
+.filter-price-wrapper {
+    display: flex;
+    padding-top: 10px;
+    flex-direction: column;
+}
+.filter-brands {
+    display: flex;
+    flex-direction: column;
+  }
+  .filter-brands__branding {
+      padding-bottom: 15px;
+  }
+  .filter-input {
+    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  }

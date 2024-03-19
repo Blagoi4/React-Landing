@@ -1,78 +1,96 @@
 import "./Catalogs.css";
 import dataCatalogs from "./data";
 import { useState } from "react";
-import Filter from "./Filter";
+import Button from "./Button";
 import CatalogList from "./CatalogList";
+import FilterPrice from "./FilterPrice";
+import FilterBrand from "./FilterBrand";
+import FilterColor from "./FilterColor";
+const MIN_PRICE = 0;
+const MAX_PRICE = 50_000;
 
 const Catalogs = () => {
   const [cards, setCards] = useState(dataCatalogs);
-  const [filterName, setFilterName] = useState([]);
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
+  const [filterBrandName, setFilterBrandName] = useState([]);
+  const [fromPrice, setFromPrice] = useState(MIN_PRICE);
+  const [toPrice, setToPrice] = useState(MAX_PRICE);
+  const [filterColor, setFilterColor] = useState([]);
 
   const getBrandName = (inputName) => {
-    if (filterName.includes(inputName)) {
-      const currentFilterNames = filterName.filter((el) => el !== inputName);
-      setFilterName(currentFilterNames);
+    if (filterBrandName.includes(inputName)) {
+      const currentFilterNames = filterBrandName.filter(
+        (el) => el !== inputName
+      );
+      setFilterBrandName(currentFilterNames);
     } else {
-      setFilterName([...filterName, inputName]);
+      setFilterBrandName([...filterBrandName, inputName]);
     }
   };
 
-  const filterCardsByBrandNAme = () => {
-    const fromNumber = Number(from) ?? 0;
-    const toNumber = Number(to) ?? 0;
+  const getColorFilter = (inputName) => {
+    if (filterColor.includes(inputName)) {
+      const currentFilterColor = filterColor.filter((el) => el !== inputName);
+      setFilterColor(currentFilterColor);
+    } else {
+      setFilterColor([...filterColor, inputName]);
+    }
+  };
 
-    const priceCheck = (el, from, to) => {
-      const elNumber = Number(el.price.split(" ")[0]);
-      if (from && to) {
-        return elNumber >= from && elNumber <= to;
-      } else if (from) {
-        return elNumber >= from;
-      } else if (to) {
-        return elNumber <= to;
-      }
-    };
+  const isBrandFiltered = (el) => filterBrandName.includes(el.brand);
 
-    const filterCards = dataCatalogs.filter((el) => {
-      if (filterName.length) {
-        if (fromNumber || toNumber) {
-          return (
-            filterName.includes(el.brand) &&
-            priceCheck(el, fromNumber, toNumber)
-          );
-        } else {
-          return filterName.includes(el.brand);
-        }
-      } else if (fromNumber || toNumber) {
-        return priceCheck(el, fromNumber, toNumber);
-      } else {
-        return true
-      }
-    });
+  const isPriceFiltered = (el) => el.price >= fromPrice && el.price <= toPrice;
 
-    setCards(filterCards);
+  const isColorFiltered = (el) => filterColor.includes(el.color);
+
+  const applyFilter = () => {
+    let filteredCards = dataCatalogs;
+
+    if (filterBrandName.length > 0) {
+      filteredCards = filteredCards.filter((el) => isBrandFiltered(el));
+    }
+
+    if (fromPrice !== 0 || toPrice !== 0) {
+      filteredCards = filteredCards.filter((el) => isPriceFiltered(el));
+    }
+
+    if (filterColor.length > 0) {
+      filteredCards = filteredCards.filter((el) => isColorFiltered(el));
+    }
+    setCards(filteredCards);
   };
 
   const resetFilterCards = () => {
     setCards(dataCatalogs);
-    setFilterName([]);
+    setFilterBrandName([]);
+    setFilterColor([]);
+    setFromPrice(MIN_PRICE);
+    setToPrice(MAX_PRICE);
   };
 
   return (
     <section>
       <div className="container">
         <div className="catalog-wrapper">
-          <Filter
-            filterCardsByBrandNAme={filterCardsByBrandNAme}
-            getBrandName={getBrandName}
-            resetFilterCards={resetFilterCards}
-            checkedItems={filterName}
-            onChangeFrom={setFrom}
-            onChangeTo={setTo}
-            from={from}
-            to={to}
-          />
+          <div className="filter-wrapper">
+            <FilterPrice
+              setFromPrice={setFromPrice}
+              setToPrice={setToPrice}
+              fromPrice={fromPrice}
+              toPrice={toPrice}
+            />
+            <FilterBrand
+              getBrandName={getBrandName}
+              checkedItems={filterBrandName}
+            />
+            <FilterColor 
+            getColorFilter={getColorFilter}
+            checkedItems={filterColor}
+            />
+            <div className="filter-brands__buttons">
+              <Button onClick={applyFilter} btnText="Применить" />
+              <Button onClick={resetFilterCards} btnText="Сбросить фильтры" />
+            </div>
+          </div>
           <CatalogList items={cards} />
         </div>
       </div>

@@ -4,83 +4,93 @@ const dataCatalogs = [
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '25550 uah',
+        price: 25_550,
         btnText: 'Подробнее',
         id: 1,
         brand: 'Belluna',
-        isChecked: false
+        isChecked: false,
+        color: 'White',
     },
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '10550 uah',
+        price: 10_550,
         btnText: 'Подробнее',
         id: 2,
         brand: 'Belluna',
-        isChecked: false
+        isChecked: false,
+        color: 'White',
     },
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '5550 uah',
+        price: 5550,
         btnText: 'Подробнее',
         id: 3,
         brand: 'Daikin',
-        isChecked: false
+        isChecked: false,
+        color: 'Silver',
     },
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '30550 uah',
+        price: 30_550,
         btnText: 'Подробнее',
         id: 4,
         brand: 'Daikin',
-        isChecked: false
+        isChecked: false,
+        color: 'Silver',
     },
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '35550 uah',
+        price: 35_550,
         btnText: 'Подробнее',
         id: 5,
         brand: 'Sapien',
-        isChecked: false
+        isChecked: false,
+        color: 'Silver',
+        
     },
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '7550 uah',
+        price: 7550,
         btnText: 'Подробнее',
         id: 6,
         brand: 'Sapien',
-        isChecked: false
+        isChecked: false,
+        color: 'Black',
     },
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '22550 uah',
+        price: 22_550,
         btnText: 'Подробнее',
         id: 7,
         brand: 'Nunc',
-        isChecked: false
+        isChecked: false,
+        color: 'Black',
     },
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '2550 uah',
+        price: 2550,
         btnText: 'Подробнее',
         id: 8,
         brand: 'Nunc',
-        isChecked: false
+        isChecked: false,
+        color: 'Orange',
     },
     {
         img: ConditionerCardIcon,
         title: 'Nisl bibendum enim',
-        price: '9550 uah',
+        price: 9550,
         btnText: 'Подробнее',
         id: 9,
         brand: 'Nunc',
-        isChecked: false
+        isChecked: false,
+        color: 'Orange',
     },
     
 ]
