@@ -6,8 +6,9 @@ import CatalogList from "./CatalogList";
 import FilterPrice from "./FilterPrice";
 import FilterBrand from "./FilterBrand";
 import FilterColor from "./FilterColor";
-const MIN_PRICE = 0;
-const MAX_PRICE = 50_000;
+import { MAX_PRICE, MIN_PRICE } from "../../constants/constants";
+
+
 
 const Catalogs = () => {
   const [cards, setCards] = useState(dataCatalogs);

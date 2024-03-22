@@ -10,11 +10,11 @@ const Header = () => {
       <div className="header-contact">
         <div className="container">
           <div className="header-contact-wrapper">
-            <Link to='/'>
-            <div className="header-contact__icon">
-              <img src={ClimateIcon} alt="" />
-              <p>Климатические системы в Украине</p>
-            </div>
+            <Link to="/">
+              <div className="header-contact__icon">
+                <img src={ClimateIcon} alt="" />
+                <p>Климатические системы в Украине</p>
+              </div>
             </Link>
             <div className="header-contact__number">
               <img src={Phone} alt="" />
@@ -27,13 +27,15 @@ const Header = () => {
         <div className="container">
           <div className="header-catalog-wrapper">
             <div className="header-catalog__menu">
-            <Link to='/catalog'>
-              <p className="p-text">
-                Каталог
-                <img src={Vector} alt="" />
-              </p>
+              <Link to="/catalog">
+                <p className="p-text">
+                  Каталог
+                  <img src={Vector} alt="" />
+                </p>
               </Link>
-              <p>Услуги</p>
+              <Link to='/reviews'>
+                <p>Отзывы</p>
+              </Link>
             </div>
             <div className="header-catalog__button">
               <Button text="Заказать обратный звонок" />
