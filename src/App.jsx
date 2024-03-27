@@ -5,9 +5,9 @@ import React from "react";
 export default function App() {
   return (
     <>
-      {/* <React.StrictMode> */}
+      <React.StrictMode>
         <RouterProvider router={router} />
-      {/* </React.StrictMode> */}
+      </React.StrictMode>
     </>
   );
 }
