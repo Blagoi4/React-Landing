@@ -1,0 +1,15 @@
+.todos-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.todos-card {
+  display: flex;
+}
+.todos {
+  flex-basis: 50%;
+  font-size: 20px;
+  display: flex;
+  padding: 10px 10px;
+  border: 1px solid sienna;
+}
