@@ -1,14 +1,22 @@
 .todos-wrapper {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 13px;
 }
 .todos-card {
   display: flex;
   align-items: center;
 }
+.todos-block {
+    display: flex;
+    flex-direction: column;
+}
+/* .todos-search {
+    display: flex;
+    
+} */
 .todos {
-  flex-basis: 50%;
+  flex-basis: 100%;
   font-size: 20px;
   display: flex;
   align-items: center;
