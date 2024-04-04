@@ -1,0 +1,13 @@
+.todo-redux-wrapper {
+   padding: 30px;
+    display: flex;
+}
+.todo-redux-title {
+    display: flex;
+    border: 1px solid navajowhite;
+}
+
+.todo-redux-text {
+display: flex;
+padding: 14px 14px;
+}

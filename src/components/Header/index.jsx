@@ -39,6 +39,9 @@ const Header = () => {
               <Link to='/todos'>
               <p>Список дел</p>
               </Link>
+              <Link to='/todoRedux'>
+              <p>TODO Redux</p>
+              </Link>
             </div>
             <div className="header-catalog__button">
               <Button text="Заказать обратный звонок" />
