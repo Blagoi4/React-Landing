@@ -8,7 +8,7 @@ import Home from '../pages/Home';
 import Catalog from '../pages/Catalog';
 import Reviews from '../pages/Reviews'
 import Todos from '../pages/Todos';
-import TodoRedux from '../pages/TodosRedux';
+import TodoRedux from '../pages/TodoRedux';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
