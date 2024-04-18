@@ -1,4 +1,4 @@
-.todo-redux-wrapper {
+/* .todo-redux-wrapper {
    padding: 30px;
     display: flex;
     flex-direction: column;
@@ -54,3 +54,12 @@
 display: flex;
 padding: 14px 14px;
 }
+
+
+.text-strike {
+text-decoration: line-through;
+}
+
+.text {
+    background-color: red;
+} */

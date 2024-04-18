@@ -8,7 +8,8 @@ import Home from '../pages/Home';
 import Catalog from '../pages/Catalog';
 import Reviews from '../pages/Reviews'
 import Todos from '../pages/Todos';
-import TodoRedux from '../pages/TodoRedux';
+import Todo from '../pages/Notes';
+import Notes from '../pages/Notes';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,7 +18,7 @@ export const router = createBrowserRouter(
       <Route path="/catalog" element={<Catalog />} />
       <Route path='/reviews' element={<Reviews/>}/>
       <Route path='/todos' element={<Todos/>}/>
-      <Route path='/todoRedux' element={<TodoRedux/>}/>
+      <Route path='/notes' element={<Notes/>}/>
     </Route>,
   ),
 );
