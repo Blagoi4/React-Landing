@@ -1,0 +1,26 @@
+.todos-wrapper {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 13px;
+}
+.todos-card {
+  display: flex;
+  align-items: center;
+}
+.todos-block {
+    display: flex;
+    flex-direction: column;
+}
+/* .todos-search {
+    display: flex;
+    
+} */
+.todos {
+  flex-basis: 100%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  border: 1px solid sienna;
+}

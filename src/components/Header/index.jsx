@@ -36,6 +36,12 @@ const Header = () => {
               <Link to='/reviews'>
                 <p>Отзывы</p>
               </Link>
+              <Link to='/todos'>
+              <p>Список дел</p>
+              </Link>
+              <Link to='/notes'>
+              <p>Мои дела</p>
+              </Link>
             </div>
             <div className="header-catalog__button">
               <Button text="Заказать обратный звонок" />
