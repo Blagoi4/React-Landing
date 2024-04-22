@@ -8,7 +8,6 @@ import Home from '../pages/Home';
 import Catalog from '../pages/Catalog';
 import Reviews from '../pages/Reviews'
 import Todos from '../pages/Todos';
-import Todo from '../pages/Notes';
 import Notes from '../pages/Notes';
 
 export const router = createBrowserRouter(
