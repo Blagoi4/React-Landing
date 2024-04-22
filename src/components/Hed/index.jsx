@@ -35,8 +35,13 @@ const pages = [
   {
     ancor: "МОИ ДЕЛА",
     href: "/notes",
+    
+  },{
+    ancor: 'FAQ',
+    href: '/faq',
     id: Math.random().toString(36).substring(2, 9),
-  },
+  }
+ 
 ];
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
