@@ -1,18 +1,11 @@
-import FaqComments from "../components/FaqComments";
-import "../components/FaqComments/FaqComments.css";
+import FaqAccordion from "../components/Acardion";
 
-const faq = () => {
+const FAQ = () => {
   return (
     <>
-      <div className="container">
-        <div className="faq-wrapper">
-          <div className="faq-content">
-            <FaqComments/>
-          </div>
-        </div>
-      </div>
+      <FaqAccordion />
     </>
   );
 };
 
-export default faq;
+export default FAQ;

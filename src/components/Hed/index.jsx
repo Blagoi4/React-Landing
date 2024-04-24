@@ -14,34 +14,32 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 
-// const pages = ["Каталог", "Отзывы", "Список дел", "Мои дела"];
-
 const pages = [
   {
-    ancor: "КАТАЛОГ",
+    anchor: "КАТАЛОГ",
     href: "/catalog",
     id: Math.random().toString(36).substring(2, 9),
   },
   {
-    ancor: "ОТЗЫВЫ",
+    anchor: "ОТЗЫВЫ",
     href: "/reviews",
     id: Math.random().toString(36).substring(2, 9),
   },
   {
-    ancor: "СПИСОК ДЕЛ",
+    anchor: "СПИСОК ДЕЛ",
     href: "/todos",
     id: Math.random().toString(36).substring(2, 9),
   },
   {
-    ancor: "МОИ ДЕЛА",
+    anchor: "МОИ ДЕЛА",
     href: "/notes",
-    
-  },{
-    ancor: 'FAQ',
-    href: '/faq',
     id: Math.random().toString(36).substring(2, 9),
-  }
- 
+  },
+  {
+    anchor: "FAQ",
+    href: "/faq",
+    id: Math.random().toString(36).substring(2, 9),
+  },
 ];
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -86,7 +84,9 @@ function Header() {
               textDecoration: "none",
             }}
           >
-            <Link to="/">LOGO</Link>
+            <div>
+              <Link to="/">LOGO</Link>
+            </div>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -121,7 +121,7 @@ function Header() {
               {pages.map((page) => (
                 <div key={page.id} className="container">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page.ancor}</Typography>
+                    <Typography textAlign="center">{page.anchor}</Typography>
                   </MenuItem>
                 </div>
               ))}
@@ -144,7 +144,9 @@ function Header() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            <div>
+              <Link to="/">LOGO</Link>
+            </div>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((item) => (
@@ -153,7 +155,7 @@ function Header() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                <Link to={item.href}>{item.ancor}</Link>
+                <Link to={item.href}>{item.anchor}</Link>
               </Button>
             ))}
           </Box>
